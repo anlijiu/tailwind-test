@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "debug": "nodemon -e js,css,html --watch src --exec \"yarn run bundle\"",
     "bundle": "webpack --config=webpack/webpack.config.js"
   },
   "devDependencies": {
@@ -8,6 +9,7 @@
     "css-loader": "^6.7.3",
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^2.7.2",
+    "nodemon": "^2.0.20",
     "postcss": "^8.4.20",
     "postcss-import": "^15.1.0",
     "postcss-loader": "^7.0.2",

@@ -1,1 +1,1 @@
-yarn bundle
+yarn debug

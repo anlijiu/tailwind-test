@@ -6,7 +6,8 @@ module.exports = {
   output: {
     path: Path.join(__dirname, `../dist`),
   },
-  mode: 'development',
+  // mode: 'development',
+  mode: 'production',
   entry: {
     'js/index': Path.resolve(__dirname, '../src/js/index.js'),
     'css/index': Path.resolve(__dirname, '../src/css/index.css'),
