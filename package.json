@@ -13,6 +13,8 @@
     "postcss": "^8.4.20",
     "postcss-import": "^15.1.0",
     "postcss-loader": "^7.0.2",
+    "postcss-map-get": "^0.3.0",
+    "postcss-mixins": "^9.0.4",
     "postcss-nested": "^6.0.0",
     "postcss-nesting": "^10.2.0",
     "postcss-rtlcss": "^4.0.1",
