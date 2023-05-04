@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<!-- grid test 1 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.min.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container0 {
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 50px 50px;
+        }
+
+        .container1 {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(2, 50px);
+        }
+
+        .container2 {
+            display: grid;
+            grid-template-columns: 200px 100px 100px;
+            grid-template-rows: 100px 50px;
+        }
+
+        .container3 {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 100px 50px;
+        }
+
+        .container4 {
+            width: 60vw;
+            display: grid;
+            grid-template-columns: 200px 2fr 1fr;
+            grid-template-rows: 100px 50px;
+        }
+
+        .container5 {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(2, 100px);
+            column-gap: 20px;
+            row-gap: 10px;
+        }
+
+        .container6 {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(2, 100px);
+            gap: 10px 20px;
+        }
+
+        .container7 {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(2, 100px);
+            gap: 10px 20px;
+        }
+        .item7:nth-child(1) {
+            background-color: red;
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .container8 {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(2, 100px);
+            gap: 10px 20px;
+        }
+        .item8:nth-child(1) {
+            background-color: red;
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        .item8:nth-child(3) {
+            background-color: yellow;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+
+        .container9 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-template-rows: repeat(2, 100px);
+            gap: 10px 20px;
+        }
+
+        .item:nth-child(1) {
+            background-color: red;
+        } 
+
+        .item:nth-child(2) {
+            background-color: orange;
+        }
+
+        .item:nth-child(3) {
+            background-color: yellow;
+        }
+
+        .item:nth-child(4) {
+            background-color: green;
+        }
+
+        .item:nth-child(5) {
+            background-color: greenyellow;
+        }
+
+        .item:nth-child(6) {
+            background-color: blue;
+        }
+
+        .item:nth-child(7) {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!--               container 0                     -->
+    <div class="flex flex-row p-10 gap-4">
+      <pre class="">
+.container<b class="text-4xl">0</b> {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 50px 50px;
+}
+      </pre>
+      <div class="container0">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+      </div>
+    </div>
+
+    <!--               container 1                     -->
+    <div class="bg-black h-1" />
+    <div class="flex flex-row p-10 gap-4">
+      <pre class="">
+.container<b class="text-4xl">1</b> {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 50px);
+}
+      </pre>
+      <div class="container1">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+      </div>
+    </div>
+
+    <!--               container 2                     -->
+    <div class="bg-black h-1" />
+    <div class="flex flex-row p-10 gap-4">
+      <pre class="">
+.container<b class="text-4xl">2</b> {
+  display: grid;
+  grid-template-columns: 200px 100px 100px;
+  grid-template-rows: 100px 50px;
+}
+      </pre>
+      <div class="container2">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+      </div>
+    </div>
+
+    <!--               container 3                     -->
+    <div class="bg-black h-1" />
+    <div class="flex flex-row p-10 gap-4">
+      <pre class="">
+.container<b class="text-4xl">3</b> {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 100px 50px;
+}
+      </pre>
+      <div class="container3">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+      </div>
+    </div>
+
+    <!--               container 4                     -->
+    <div class="bg-black h-1" />
+    <div class="flex flex-row p-10 gap-4">
+      <pre class="">
+.container<b class="text-4xl">4</b> {
+  width: 60vw;
+  display: grid;
+  grid-template-columns: 200px 2fr 1fr;
+  grid-template-rows: 100px 50px;
+}
+      </pre>
+      <div class="container4">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+      </div>
+    </div>
+
+    <!--               container 5                     -->
+    <div class="bg-black h-1" />
+    <div class="flex flex-row p-10 gap-4">
+      <pre class="">
+.container<b class="text-4xl">5</b> {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(2, 100px);
+  column-gap: 20px;
+  row-gap: 10px;
+}
+      </pre>
+      <div class="container5">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+      </div>
+    </div>
+
+    <!--               container 6                     -->
+    <div class="bg-black h-1" />
+    <div class="flex flex-row p-10 gap-4">
+      <pre class="">
+.container<b class="text-4xl">6</b> {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(2, 100px);
+  gap: 10px 20px;
+}
+      </pre>
+      <div class="container6">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+      </div>
+    </div>
+
+    <!--               container 7                     -->
+    <div class="bg-black h-1" />
+    <div class="flex flex-row p-10 gap-4 items-start">
+      <pre class="">
+三格  ===  四条网格线
+第一个 item 从第一条网格线开始，在第四列线结束。即占据整行。
+.container<b class="text-4xl">7</b> {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 10px 20px;
+}
+.item7:nth-child(1) {
+    background-color: red;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+      </pre>
+      <div class="container7 shrink">
+          <div class="item item7">1</div>
+          <div class="item item7">2</div>
+          <div class="item item7">3</div>
+          <div class="item item7">4</div>
+          <div class="item item7">5</div>
+          <div class="item item7">6</div>
+      </div>
+    </div>
+
+    <!--               container 8                     -->
+    <div class="bg-black h-1" />
+    <div class="flex flex-row p-10 gap-4 items-start">
+      <pre class="">
+.container<b class="text-4xl">8</b> {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 10px 20px;
+}
+.item8:nth-child(1) {
+    background-color: red;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.item8:nth-child(3) {
+	background-color: yellow;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+      </pre>
+      <div class="container8">
+          <div class="item item8">1</div>
+          <div class="item item8">2</div>
+          <div class="item item8">3</div>
+          <div class="item item8">4</div>
+          <div class="item item8">5</div>
+          <div class="item item8">6</div>
+      </div>
+    </div>
+
+
+    <!--               container 9                     -->
+    <div class="bg-black h-1" />
+    <div class="flex flex-row p-10 gap-4 items-start">
+      <pre class="">
+
+<b class="text-xl">auto-fit</b>
+自适应列的数量，栅格将会根据容器的宽度调整其数量。
+
+<b class="text-xl">minmax(100px, 1fr)</b>代表每列的列宽将至少为 100px
+如果有更多的可用空间
+栅格布局会将其均分给每列
+
+.container<b class="text-4xl">9</b> {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, 100px);
+    gap: 10px 20px;
+}
+      </pre>
+      <div class="container9 flex-auto">
+          <div class="item item9">1</div>
+          <div class="item item9">2</div>
+          <div class="item item9">3</div>
+          <div class="item item9">4</div>
+          <div class="item item9">5</div>
+          <div class="item item9">6</div>
+      </div>
+    </div>
+
+</body>
+</html>
